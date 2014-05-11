@@ -6,6 +6,13 @@ At initial, 10 top movies and 10 bottom movies are given as seeds.
 For each review it crawled, it will add the unseen user or movie to
 the taskqueue.
 
+Before running, you have to build the tables in mysql and change the
+<b>host, passward</b> and <b>userID</b>  
+(line <b>9</b> in mySQLWrapper.py and line <b>9</b> in mysql2file.py).
+```python
+conn=pymysql.connect(host="IP",user="MySQL user ID",passwd="password",db="imdb")
+```
+
 The main fuction files:
 ```python
 crawler.py     -  crawl the reviews
